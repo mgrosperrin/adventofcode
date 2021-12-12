@@ -14,6 +14,7 @@ static IChallenge GetChallenge(string challengeName)
         "day1_2" => new Day1.Part2(),
         "day2_1" => new Day2Part1(),
         "day2_2" => new Day2Part2(),
+        "day3_1" => new Day3Part1(),
         _ => throw new ArgumentOutOfRangeException(nameof(challengeName))
     };
 }
