@@ -9,7 +9,7 @@ internal class Day3Part1 : IChallenge
         var numberOfOne = new int[length];
         for (var currentLine = 0; currentLine < numberOfLines; currentLine++)
         {
-            for (int currentRow = 0; currentRow < length; currentRow++)
+            for (var currentRow = 0; currentRow < length; currentRow++)
             {
                 if (lines[currentLine][currentRow] == '1')
                 {
@@ -18,7 +18,7 @@ internal class Day3Part1 : IChallenge
             }
         }
         int gamma = 0, epsilon = 0;
-        for (int currentRow = 0; currentRow < length; currentRow++)
+        for (var currentRow = 0; currentRow < length; currentRow++)
         {
             if(numberOfOne[currentRow] > numberOfLines / 2)
             {

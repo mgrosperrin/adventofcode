@@ -4,7 +4,7 @@ internal class Day2Part1: IChallenge
     public string Solve(string[] lines, IEnumerable<string> remainingArgs)
     {
         int horizontalPosition = 0, depth = 0;
-        for (int i = 0; i < lines.Length; i++)
+        for (var i = 0; i < lines.Length; i++)
         {
             var parts = lines[i].Split(' ');
             switch (parts[0])

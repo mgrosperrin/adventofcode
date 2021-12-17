@@ -5,7 +5,7 @@ namespace AoC2021.Tests
 {
     public class Day3Tests
     {
-        private static readonly string[] lines = new[] {
+        private static readonly string[] lines = {
                             "00100",
                             "11110",
                             "10110",
@@ -27,13 +27,13 @@ namespace AoC2021.Tests
 
             Assert.Equal("198", result);
         }
-        //[Fact]
-        //public void ValidateDay3Part2()
-        //{
-        //    var challenge = new Day3Part2();
-        //    var result = challenge.Solve(lines, Enumerable.Empty<string>());
+        [Fact]
+        public void ValidateDay3Part2()
+        {
+            var challenge = new Day3Part2();
+            var result = challenge.Solve(lines, Enumerable.Empty<string>());
 
-        //    Assert.Equal("900", result);
-        //}
+            Assert.Equal("230", result);
+        }
     }
 }

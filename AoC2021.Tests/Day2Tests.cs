@@ -5,7 +5,7 @@ namespace AoC2021.Tests
 {
     public class Day2Tests
     {
-        private static readonly string[] lines = new[] {
+        private static readonly string[] lines = {
                             "forward 5",
                             "down 5",
                             "forward 8",
