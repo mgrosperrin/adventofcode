@@ -8,16 +8,14 @@ Console.WriteLine(result);
 
 static IChallenge GetChallenge(string challengeName)
 {
-    return challengeName switch
+    var challenges = typeof(Program).Assembly.GetTypes()
+        .Where(t => t.IsAssignableTo(typeof(IChallenge)))
+        .Where(t => !t.IsAbstract)
+        .Select(t => ((IChallenge)Activator.CreateInstance(t)))
+        .ToDictionary(challenge => challenge.Name, challenge => challenge);
+    if(challenges.TryGetValue(challengeName, out var challenge))
     {
-        "day1_1" => new Day1.Part1(),
-        "day1_2" => new Day1.Part2(),
-        "day2_1" => new Day2Part1(),
-        "day2_2" => new Day2Part2(),
-        "day3_1" => new Day3Part1(),
-        "day3_2" => new Day3Part2(),
-        "day4_1" => new Day4.Part1(),
-        "day4_2" => new Day4.Part2(),
-        _ => throw new ArgumentOutOfRangeException(nameof(challengeName))
-    };
+        return challenge!;
+    }
+    throw new Exception("challenge not found");
 }

@@ -1,6 +1,7 @@
 ﻿namespace AoC2021;
 internal class Day2Part2: IChallenge
 {
+    public string Name => "day2_2";
     public string Solve(string[] lines, IEnumerable<string> remainingArgs)
     {
         int horizontalPosition = 0, depth = 0, aim = 0;

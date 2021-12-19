@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="AoC2021.Tests"/>
+    <InternalsVisibleTo Include="AoC2021.Tests" />
   </ItemGroup>
 
 </Project>

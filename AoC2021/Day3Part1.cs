@@ -2,6 +2,7 @@
 
 internal class Day3Part1 : IChallenge
 {
+    public string Name => "day3_1";
     public string Solve(string[] lines, IEnumerable<string> remainingArgs)
     {
         var numberOfLines = lines.Length;

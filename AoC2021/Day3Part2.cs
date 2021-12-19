@@ -2,6 +2,7 @@
 
 internal class Day3Part2 : IChallenge
 {
+    public string Name => "day3_2";
     public string Solve(string[] lines, IEnumerable<string> remainingArgs)
     {
         var remainingOxygenGeneratorRatingLines = new List<string>(lines);

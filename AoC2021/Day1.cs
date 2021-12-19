@@ -2,6 +2,7 @@
 
 internal abstract partial class Day1 : IChallenge
 {
+    public abstract string Name {get;}
     public string Solve(string[] lines, IEnumerable<string> _)
     {
         var step = GetStep();

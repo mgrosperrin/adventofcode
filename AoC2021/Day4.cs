@@ -2,6 +2,7 @@
 
 internal abstract partial class Day4 : IChallenge
 {
+    public abstract string Name { get; }
     public string Solve(string[] lines, IEnumerable<string> remainingArgs)
     {
         var numbers = lines[0].Split(',', StringSplitOptions.RemoveEmptyEntries)
